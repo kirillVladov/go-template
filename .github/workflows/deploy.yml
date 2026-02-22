@@ -1,0 +1,38 @@
+# name: Deploy to Kubernetes
+
+# on:
+#   push:
+#     branches: [master]
+#   pull_request:
+#     branches: [master]
+#   workflow_dispatch:
+#     inputs:
+#       environment:
+#         description: 'Environment to deploy to'
+#         required: true
+#         default: 'prod'
+#         type: choice
+#         options:
+#         - prod
+
+# permissions:
+#   contents: read
+#   packages: write
+
+# env:
+#   REGISTRY: ghcr.io
+#   IMAGE_NAME: kirillvladov/nod-back
+
+# jobs:
+#   base:
+#     uses: kirillVladov/ci-cd-templates/.github/workflows/deploy.yml@main
+
+#     with: 
+#       REGISTRY: ghcr.io
+#       IMAGE_NAME: kirillvladov/go-template
+#       NAMESPACE: "go-template"
+
+#     secrets:
+#          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+#          GH_USERNAME: ${{ secrets.GH_USERNAME }}
+#          KUBE_CONFIG_PROD: ${{ secrets.KUBE_CONFIG_PROD }}

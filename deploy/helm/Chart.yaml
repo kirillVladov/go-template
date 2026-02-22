@@ -1,0 +1,15 @@
+apiVersion: v2
+name: go-template
+description: A Helm chart for NOD Back application
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
+keywords:
+  - vue
+  - frontend
+  - web
+home: https://go-template.ru
+sources:
+  - https://github.com/kirillVladov/go-template.git
+maintainers:
+  - name: NOD Team
